@@ -2,7 +2,7 @@ import { MongoClient, InsertOneOptions, AggregationCursor, FindCursor } from "mo
 import { Writable } from "stream";
 
 interface TransformationFunction {
-    (doc: Document): any;
+    (doc: any): any;
 }
 
 /**

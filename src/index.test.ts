@@ -52,6 +52,26 @@ describe("clone()", function () {
         stream.on("error", err => done(err));
     });
 
+    it("Clone data with a transformation function using a AggregateCursor", function (done) {
+        const aggregateCursor = client.db().collection("source").aggregate([]);
+        const stream = clone(
+            aggregateCursor,
+            client,
+            "target",
+            (doc) => {
+                doc.message = "Edited!";
+                return doc;
+            }
+        );
+
+        stream.on("close", async () => {
+            const docs = await client.db().collection("target").find({}).toArray();
+            assert(docs.length === 1, "Invalid number of documents copied");
+            done();
+        });
+        stream.on("error", err => done(err));
+    });
+
     after("Terminate mocks", async function () {
         await client.close();
         await mongod.stop();
