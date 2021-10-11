@@ -5,7 +5,7 @@ A writable stream to insert query results into MongoDB collections.
 ## Installation
 
 ```
-npm i --save mongo-write-stream
+npm i --save mongodb-stream-write
 ```
 
 ## API
