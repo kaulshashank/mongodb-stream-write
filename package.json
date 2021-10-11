@@ -1,0 +1,30 @@
+{
+  "name": "mongo-write-stream",
+  "version": "0.1.0",
+  "description": "Make a writable stream to a MongoDB collection",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:w": "tsc -w",
+    "test": "mocha --require ts-node/register --color --timeout 10000 --recursive './src/*.test.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@me.github.com:kaulshashank/mongo-write-stream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "mongodb-memory-server": "^7.4.3",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.3"
+  }
+}
