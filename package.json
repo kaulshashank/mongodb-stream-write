@@ -1,6 +1,6 @@
 {
-  "name": "mongo-write-stream",
-  "version": "0.1.0",
+  "name": "mongodb-stream-write",
+  "version": "1.0.0",
   "description": "Make a writable stream to a MongoDB collection",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@me.github.com:kaulshashank/mongo-write-stream.git"
+    "url": "git@github.com:kaulshashank/mongodb-stream-write.git"
   },
   "author": "",
   "license": "ISC",
