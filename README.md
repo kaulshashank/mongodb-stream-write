@@ -10,29 +10,32 @@ npm i --save mongo-write-stream
 
 ## API
 
-### `createCollectionWriteStream(client, collection, [transformer, insertOptions]) => Writable`
+### Methods
+
+#### `createCollectionWriteStream(client, collection, [transformer, insertOptions])`
 Creates a writable stream to a collection on provided MongoClient.
 
-#### Options
+##### Options
  * client: A connected instance of MongoClient
  * collection: Collection name to write documents into
  * transformer: Optional transformation function to apply on every document to be written to the collection
  * insertOptions: Optional options to provide to collection.insertOne()
 
-returns - Writable stream to the provided collection argument
+##### Returns
+Writable stream to the target collection.
 
-### `clone(cursor, target, collection, [transformer, insertOptions])`
+#### `clone(cursor, target, collection, [transformer, insertOptions])`
 Utility to transfer data efficiently using a stream.
 
-#### Options
+##### Options
  * cursor: A mongo client FindCursor or AggregationCursor instance
  * target: A connected instance of MongoClient
  * collection: Collection name to write documents into
  * transformer: Optional transformation function to apply on every document to be written to the collection
  * insertOptions: Optional options to provide to collection.insertOne()
 
-returns - Writable stream to the target collection
-
+##### Returns
+Writable stream to the target collection.
 
 ## Examples
 
